@@ -1,0 +1,23 @@
+{
+  "name": "resume-cl",
+  "version": "1.0.0",
+  "description": "Curriculo por linha de comando",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorHenriqueAraujo/resume-cl.git"
+  },
+  "author": "Igor Henrique de Araújo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igorHenriqueAraujo/resume-cl/issues"
+  },
+  "homepage": "https://github.com/igorHenriqueAraujo/resume-cl#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "inquirer": "^7.0.0"
+  }
+}

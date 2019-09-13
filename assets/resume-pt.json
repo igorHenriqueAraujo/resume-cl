@@ -1,0 +1,39 @@
+{
+    "Experiência" : [
+        "Engenheiro de Software, PagSeguro, Setembro 2019 - Atual",
+        "Arquiteto de Software, Prime IT, Abril 2015 - Agosto 2019",
+        "Analista Desenvolvedor SR. / Líder Técnico, Bemobi, Junho 2013 - Março 2015",
+        "Consultor de Desenvolvimento JEE, Avanti Prima, Fevereiro 2012 - Abril 2013",
+        "Desenvolvedor JEE, EloSoft / Prima Informática, Fevereiro 2011 - Fevereiro 2012"
+    ],
+    "Formação" : [
+        "Bacharel em Sistemas de Informação, UNIPAR, 2007-2010",
+        "MBA Engenharia de Software, UFRJ, 2013-2015"
+    ],
+    "Habilidades" : [
+        "Desenvolvimento",
+        "Ferramentas de Build, Validação de código e Integração contínua",
+        "Servidores",
+        "Metodologias",
+        "Bancos de Dados",
+        "Padrões e Arquiteturas",
+        "Nuvem"
+    ],
+    "Conquistas" : [
+        "Do Zero ao Blockchain - Udemy Academy",
+        "Docker: Ferramenta essencial para Desenvolvedores - Udemy Academy",
+        "API RESTful com Spring Boot e Java 8 - Udemy Academy",
+        "Build A Web App With Spring Framework and Angular 2 - Udemy Academy.",
+        "AWS - Curso Preparatório para Certificação Developer - Udemy Academy.",
+        "Mongo, Express, Angular e Node: Primeira Aplicação do Zero - Udemy Academy.",
+        "JB248 JBoss Application Administration.",
+        "Oficina de Modelagem Orientada a Objetos (UML) UNIPAR/PR",
+        "Programação em Java para Web (JSF/JSP/Hibernate/Postgresql) - UNIPAR/PR.",
+        "Programação para Web com PHP.",
+        "jCompany Developer Suite."
+    ],
+    "Idiomas" : [
+        "Português Fluente",
+        "Inglês Avançado"
+      ]
+}
