@@ -1,11 +1,11 @@
 {
-    "Experiência" : [
-        "Engenheiro de Software, PagSeguro, Setembro 2019 - Atual",
-        "Arquiteto de Software, Prime IT, Abril 2015 - Agosto 2019",
-        "Analista Desenvolvedor SR. / Líder Técnico, Bemobi, Junho 2013 - Março 2015",
-        "Consultor de Desenvolvimento JEE, Avanti Prima, Fevereiro 2012 - Abril 2013",
-        "Desenvolvedor JEE, EloSoft / Prima Informática, Fevereiro 2011 - Fevereiro 2012"
-    ],
+    "Experiência" : {
+        "Engenheiro de Software, PagSeguro" : "\nEngenheiro de Software, PagSeguro, Setembro 2019 - Atual\nExperiência do desenvolvedor.",
+        "Arquiteto de Software, Prime IT" : "Arquiteto de Software, Prime IT, Abril 2015 - Agosto 2019\nMeu trabalho varia em realizar validação de arquitetura, verificar os padrões e qualidade de código bem como refatoração dos mesmos para adaptação aos padrões do cliente e práticas TDD. \nConstrução de novas arquiteturas em novos projetos para os clientes ou em potenciais produtos da empresa. \nMentoria e liderança de times de operação de fábrica de software, atuando como ponto focal de dúvidas e soluções de problemas de alta complexidade. \n\nPrincipais projetos em que atuei. \n\nEspecialista em arquitetura no cliente BNDES, englobando o seguinte ambiente. \n\nJava EE (JSF, JSP, CDI, EJB) \nJUnit \nWebsphere Application Server \nWebsphere Process Server \nWebsphere Integration Developer \nBusiness Process Manager (BPM) \nSonar \nJenkins \n\nProjeto Critico de cálculo e geração de pagamentos de ISS as prefeituras locais para o cliente Cielo. \n\nJava 8 \nEJB \nJUnit \nSpring MVC \nWeblogic \n Bootstratp \n\nValidação, homologação e componentização de Arquitetura Web/Mobile responsivo no cliente Bradesco. \n\nAngular 4 \nJava EE \nWebsphere \nWebpack \nGulp \n\nLiderança e mentoria em projetos Bradesco na operação da fábrica de software. \n\nJava EE \nCDI \nJSF \n\nMotor de parametrização e execução de regras para o cliente Odontoprev (Atualmente) \n\nArquitetura de Microserviços \nSpring Boot \nVueJS \nWebpack \nDocker \nDocker Compose \nJenkins \nSonar \n",
+        "Analista Desenvolvedor SR. / Líder Técnico, Bemobi": "Analista Desenvolvedor SR. / Líder Técnico, Bemobi, Junho 2013 - Março 2015",
+        "Consultor de Desenvolvimento JEE, Avanti Prima": "Consultor de Desenvolvimento JEE, Avanti Prima, Fevereiro 2012 - Abril 2013",
+        "Desenvolvedor JEE, EloSoft / Prima Informática": "Desenvolvedor JEE, EloSoft / Prima Informática, Fevereiro 2011 - Fevereiro 2012"
+    },
     "Formação" : [
         "Bacharel em Sistemas de Informação, UNIPAR, 2007-2010",
         "MBA Engenharia de Software, UFRJ, 2013-2015"

@@ -18,40 +18,84 @@ function resumePrompts(lang, resume) {
         type: "list",
         name: "resumeOptions",
         message: lang === "pt" ? "O que você quer saber sobre mim?" : "What do you want to know about me?",
-        choices: [...Object.keys(resume), lang === "pt" ? "Sair" : "Exit"]
+        choices: [...Object.keys(resume), lang === "pt" ? "Trocar Idioma" : "Change Language", lang === "pt" ? "Sair" : "Exit"]
     }
 }
 
+function detailPrompts(lang, option) {
+  return {
+    type: "list",
+    name: "detailOptions",
+    message: lang === "pt" ? "Sobre o que você gostaria de saber mais?" : "What would you like to know more about?",
+    choices: [...Object.keys(option), lang === "pt" ? "Trocar Idioma" : "Change Language", lang === "pt" ? "Voltar" : "Back", lang === "pt" ? "Sair" : "Exit"]
+  }
+}
+
 function main() {
-    langHandler()
+  langHandler()
+}
+
+function exitBackHandler(lang, resume, option) {
+  inquirer
+  .prompt({
+    type: "list",
+    name: "exitBack",
+    message: lang === "pt" ? "Voltar ou Sair?" : "Go back or Exit?",
+    choices: lang === "pt" ? ["Voltar", "Sair"] : ["Back", "Exit"]
+  })
+  .then(choice => {
+    if (choice.exitBack === "Back" || choice.exitBack === "Voltar") {
+      if (option == undefined) {
+        resumeHandler(lang, resume)
+      } else {
+        detailsHandler(lang, option, resume)
+      }
+    } else {
+      return;
+    }
+  });
 }
 
 function resumeHandler(lang, resume) {
   inquirer.prompt(resumePrompts(lang, resume)).then(choice => {
     if (choice.resumeOptions === "Sair" || choice.resumeOptions === "Exit") {
-        return;
+        return
     }
-    let content = choice.resumeOptions;
-    console.log(response("--------------------------------------"));
-    resume[`${content}`].forEach(info => {
-      console.log(response("|   => " + info));
-    });
-    console.log(response("--------------------------------------"));
-    inquirer
-    .prompt({
-      type: "list",
-      name: "exitBack",
-      message: lang === "pt" ? "Voltar ou Sair?" : "Go back or Exit?",
-      choices: lang === "pt" ? ["Voltar", "Sair"] : ["Back", "Exit"]
-    })
-    .then(choice => {
-      if (choice.exitBack === "Back" || choice.exitBack === "Voltar") {
-        resumeHandler(lang, resume);
+    if (choice.resumeOptions === "Trocar Idioma" || choice.resumeOptions === "Change Language") {
+      langHandler()
+    } else {
+      let content = choice.resumeOptions;
+      if (Array.isArray(resume[`${content}`])) {
+        console.log(response("--------------------------------------"));
+        resume[`${content}`].forEach(info => {
+          console.log(response("|   => " + info));
+        });
+        console.log(response("--------------------------------------"));
+        exitBackHandler(lang, resume)
       } else {
-        return;
+        detailsHandler(lang, resume[`${content}`], resume)
       }
-    });
-})
+    }
+  })
+}
+
+function detailsHandler(lang, option, resume) {
+  inquirer.prompt(detailPrompts(lang, option)).then(choice => {
+    if (choice.detailOptions === "Sair" || choice.detailOptions === "Exit") {
+        return
+    }
+    if (choice.detailOptions === "Back" || choice.detailOptions === "Voltar") {
+      resumeHandler(lang, resume);
+    } else if (choice.detailOptions === "Trocar Idioma" || choice.detailOptions === "Change Language") {
+      langHandler()
+    } else {
+      let content = choice.detailOptions;
+      console.log(response("--------------------------------------"));
+      console.log(response("|   => " + option[`${content}`]));
+      console.log(response("--------------------------------------"));
+      exitBackHandler(lang, resume, option)
+    }
+  })
 }
 
 function langHandler() {
