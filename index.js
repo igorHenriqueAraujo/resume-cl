@@ -25,6 +25,7 @@ function resumePrompts(lang, resume) {
 function detailPrompts(lang, option) {
   return {
     type: "list",
+    pageSize: "10",
     name: "detailOptions",
     message: lang === "pt" ? "Sobre o que você gostaria de saber mais?" : "What would you like to know more about?",
     choices: [...Object.keys(option), lang === "pt" ? "Trocar Idioma" : "Change Language", lang === "pt" ? "Voltar" : "Back", lang === "pt" ? "Sair" : "Exit"]
